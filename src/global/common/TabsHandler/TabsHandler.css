@@ -1,0 +1,16 @@
+.tabs_header {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.tabs_outer_div {
+  padding: 0 !important;
+}
+
+.tabs_content_div {
+  padding: 8px;
+}
+
+.ordertotal-module.raised.tabs_outer_div > div > header > div > div > div > div > button > span > span > span {
+  font-size: 13px;
+}

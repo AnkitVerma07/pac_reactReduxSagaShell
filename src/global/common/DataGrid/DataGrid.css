@@ -1,0 +1,751 @@
+.ReactTable > .rt-table > .rt-thead.-header {
+  box-shadow: none;
+}
+
+.ReactTable > .rt-table > .rt-thead.-header > .rt-tr > .rt-th {
+  border-right: none;
+}
+
+.ReactTable > .rt-table > .rt-tbody > .rt-tr-group {
+  border-bottom: 1px solid rgba(215, 215, 215, 0.4);
+}
+
+.ReactTable, .ReactTable.orderlines-grid, .ReactTable.paymenthistory-grid {
+  border: none;
+}
+
+.ReactTable.orderlines-grid {
+  margin-right: 24px;
+}
+
+.ReactTable.paymenthistory-grid {
+  height: 234px;
+  overflow-y: auto;
+}
+
+.ReactTable.seatblock-grid {
+  height: 98%;
+}
+
+.ReactTable.seatblock-grid > .rt-table > .rt-tbody {
+  height: 156px;
+}
+
+.rt-thead.-header {
+  height: 56px;
+  border-bottom: 1px solid rgba(215, 215, 215, 0.4);
+}
+
+.rt-thead.-header > .rt-tr > .rt-th {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  padding-right: 8px;
+  color: rgba(106, 106, 106, 0.8);
+  overflow: unset;
+  text-overflow: unset;
+  white-space: pre-wrap;
+}
+
+.rt-thead.-header > .rt-tr > .rt-th > div > span {
+  font-size: 12px;
+}
+
+.rt-tbody > .rt-tr-group {
+  min-height: 48px;
+  flex: none;
+}
+
+.rt-tbody > .rt-tr-group > .rt-tr > .rt-td {
+  border-right: none;
+  padding: 15px 8px 15px 0px;
+  color: rgb(51, 51, 51);
+  overflow: unset;
+  text-overflow: unset;
+  white-space: nowrap;
+}
+
+.rt-tbody > .rt-tr-group > .rt-tr > .rt-td > span {
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inherit;
+}
+
+.ReactTable > div.rt-table > div.rt-thead.-header > div > div.rt-th > div > span > i {
+  display: inline;
+  font-size: 16px;
+  margin-left: 3px;
+}
+
+.ReactTable > .rt-table > .rt-thead.-header > .rt-tr > .rt-th.-sort-asc,
+.ReactTable > .rt-table > .rt-thead.-header > .rt-tr > .rt-th.-sort-desc,
+.default-col-bold {
+  color: rgb(51, 51, 51);
+  font-weight: 700;
+}
+
+/* fixes a bug where table's width is infinite */
+.ReactTable > .rt-table > .rt-thead.-header,
+.ReactTable > .rt-table > .rt-tbody {
+  min-width: 0px !important;
+}
+
+/* conditional styles to make orderline grid header sticky */
+.ReactTable.orderlines-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.marketplace-transactions-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.marketplace-reservations-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.exchanges-consumer-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.exchanges-operator-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.evenue-to-cust-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.evenue-from-cust-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.operator-transfers-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.returns-voids-grid > .rt-table > .rt-thead.-header.sticky,
+.op-exp-col-btns.sticky,
+.con-exp-col-btns.sticky {
+  position: fixed;
+  display: flex;
+  top: 0;
+  flex: 100 0 auto;
+  background-color: #fff;
+}
+
+.ReactTable.marketplace-transactions-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.marketplace-reservations-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.evenue-to-cust-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.evenue-from-cust-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.operator-transfers-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.returns-voids-grid > .rt-table > .rt-thead.-header.sticky {
+  width: 97%;
+  z-index: 100;
+}
+
+.ReactTable.orderlines-grid > .rt-table > .rt-thead.-header.sticky {
+  width: 75%;
+  z-index: 100;
+}
+
+.ReactTable.exchanges-consumer-grid > .rt-table > .rt-thead.-header.sticky,
+.ReactTable.exchanges-operator-grid > .rt-table > .rt-thead.-header.sticky {
+  width: 96%;
+  z-index: 100;
+}
+
+.ReactTable > .rt-table > .rt-thead.-header.sticky + .rt-tbody {
+  margin-top: 50px;
+}
+
+.ReactTable > .rt-table > .rt-thead.-header.windows-scroll-padding {
+  padding-right: 17px;
+}
+
+.marketplace-grid,
+.marketplace-transactions-grid,
+.marketplace-reservations-grid,
+.exchanges-consumer-grid,
+.exchanges-operator-grid,
+.evenue-to-cust-grid,
+.evenue-from-cust-grid,
+.operator-transfers-grid,
+.returns-voids-grid {
+  width: 100%;
+}
+
+.tabs_content_div > div > .tabs_content_div > .all-grid-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* 
+  Setting widths for Order Lines Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  padding-left: 8px;
+  width: 14% !important;
+}
+
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3) {
+  width: 3% !important;
+  text-align: left;
+}
+
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6) {
+  width: 5% !important;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8) {
+  width: 8% !important;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10) {
+  width: 7% !important;
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12) {
+  width: 7% !important;
+  text-align: left;
+}
+
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(13),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(13) {
+  width: 9% !important;
+  text-align: left;
+}
+
+.ReactTable.orderlines-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(14),
+.ReactTable.orderlines-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(14) {
+  width: 11% !important;
+  text-align: left;
+}
+
+/* 
+  Setting widths for Payment History Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  width: 19% !important;
+}
+
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2) {
+  width: 26% !important;
+}
+
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3) {
+  width: 30% !important;
+}
+
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2) {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4) {
+  margin-right: 6px;
+}
+
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.paymenthistory-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4) {
+  width: 24% !important;
+}
+
+/*
+  Setting widths for Seat Block Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.seatblock-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.seatblock-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  width: 17% !important;
+}
+
+.ReactTable.seatblock-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.seatblock-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2) {
+  width: 36% !important;
+}
+
+.ReactTable.seatblock-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.seatblock-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3) {
+  width: 36% !important;
+}
+
+.ReactTable.seatblock-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.seatblock-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4) {
+  width: 10% !important;
+}
+
+/*
+  Setting widths for Marketplace-Transactions Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12) {
+  width: 11% !important;
+}
+
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11) {
+  width: 5% !important;
+}
+
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11) {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(13),
+.ReactTable.marketplace-transactions-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(13) {
+  width: 10% !important;
+}
+
+/*
+  Setting widths for Marketplace-Transactions Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  width: 21% !important;
+}
+
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2) {
+  width: 5% !important;
+}
+
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4) {
+  width: 20% !important;
+}
+
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7) {
+  width: 8% !important;
+}
+
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8) {
+  width: 10% !important;
+}
+
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.marketplace-reservations-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5) {
+  text-align: right;
+  justify-content: flex-end;
+}
+
+/*
+  Setting widths for Exchanges-Consumer Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  margin-left: 34px;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5) {
+  width: 19% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6) {
+  width: 20% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7) {
+  width: 6% !important;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8) {
+  width: 6% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9) {
+  width: 6% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10) {
+  width: 8% !important;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.exchanges-subconsumer-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11) {
+  width: 10% !important;
+}
+
+.ReactTable.exchanges-consumer-grid > div.rt-table > div.rt-tbody > div > .ReactTable.exchanges-subconsumer-grid > div.rt-table {
+  width: 100% !important;
+}
+
+/*
+  Setting widths for Exchanges-Operator Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1) {
+  margin-left: 34px;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4) {
+  width: 15% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6) {
+  width: 15% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7) {
+  width: 15% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8) {
+  width: 5% !important;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10) {
+  width: 5% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11) {
+  width: 6% !important;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(13),
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(13),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.exchanges-suboperator-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12) {
+  width: 10% !important;
+}
+
+.ReactTable.exchanges-operator-grid > div.rt-table > div.rt-tbody > div > .ReactTable.exchanges-suboperator-grid > div.rt-table {
+  width: 100% !important;
+}
+
+/*
+  Hiding the subcomponent grid headers for expanding/collapsing UI
+*/
+.ReactTable.exchanges-consumer-grid > .rt-table > .rt-tbody > .rt-tr-group > .ReactTable > .rt-table > .rt-thead,
+.ReactTable.exchanges-operator-grid > .rt-table > .rt-tbody > .rt-tr-group > .ReactTable > .rt-table > .rt-thead {
+  display: none;
+}
+
+/*
+  Setting widths for Evenue-To-Cust Grid AND Evenue-From-Cust Grid since they have exact same %'s and number of columns
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8) {
+  width: 5% !important;
+}
+
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6) {
+  width: 15% !important;
+}
+
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11) {
+  width: 6% !important;
+}
+
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10) {
+  width: 8% !important;
+}
+
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12) {
+  width: 10% !important;
+}
+
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.evenue-to-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.evenue-from-cust-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10) {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/*
+  Setting widths for Operator-Transfers Grid
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(12),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(12) {
+  width: 5% !important;
+}
+
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6),.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10),.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11),.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(13),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(13) {
+  width: 10% !important;
+}
+
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.operator-transfers-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8) {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/*
+  Setting widths for all Returns-Voids Grids
+  Since the table is designed to have PX set as width,
+  Grid does not scale well, so use pure CSS to set %'s
+*/
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(1),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(1),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(2),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(2),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(3),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(3),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(8),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(8),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9) {
+  width: 5% !important;
+}
+
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(4),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(4),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(5),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(5),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(6),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(6) {
+    width: 15% !important;
+}
+
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(7),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(7),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(11),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(11) {
+  width: 10% !important;
+}
+
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(10),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(10) {
+  width: 6% !important;
+}
+
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-thead.-header > div > div:nth-child(9),
+.ReactTable.returns-voids-grid > div.rt-table > div.rt-tbody > div > div > div:nth-child(9) {
+  justify-content: flex-end;
+  text-align: right;
+}

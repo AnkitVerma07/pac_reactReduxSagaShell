@@ -1,0 +1,83 @@
+#simple-dialog-title {
+  padding: 0;
+  height: 43px;
+}
+
+#simple-dialog-title > h2 {
+  font-weight: 500;
+  color: #333 100%;
+  opacity: 100%;
+  font-size: 20px;
+}
+
+#simple-dialog-body {
+  flex: 1;
+  overflow-y: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+#simple-dialog-body > div, #simple-dialog-body > p, #simple-dialog-body > h3, #simple-dialog-body > div > ul, #simple-dialog-body > div > div > ul {
+  font-family: 'Roboto-Web', sans-serif !important;
+  font-size: 14px;
+}
+
+#simple-dialog-body > h3 {
+  font-weight: 700;
+  color: #9A9A9A;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#simple-dialog-body > p {
+  font-size: 14px;
+}
+
+#simple-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 0;
+  height: 27px;
+  padding: 8px 0px 8px 8px;
+}
+
+.dialog-paper {
+  padding: 24px 8px 8px 24px;
+  height: 298px;
+  width: 395px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dialog-click-label {
+  color: rgb(239, 108, 0);
+  cursor: pointer;
+}
+
+#simple-dialog-body > div > ul.field {
+  flex: none;
+  width: 80px;
+}
+
+#simple-dialog-body > div:nth-child(2) > ul.field {
+  margin-bottom: 16px;
+}
+
+#simple-dialog-body > div > ul.value {
+  padding-left: 22px;
+}
+
+#simple-dialog-body.overflow-dialog-body {
+  padding-right: 6px;
+}
+
+.overflow-dialog-body { 
+  border-top: 1px solid rgb(215, 215, 215);
+  border-bottom: 1px solid rgb(215, 215, 215);
+  margin-left: -24px;
+  margin-right: -8px;
+  padding-left: 24px;
+  padding-right: 20px;
+}

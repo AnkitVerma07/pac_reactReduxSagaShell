@@ -1,0 +1,47 @@
+/**********************************************************************************************  
+	Tooltip related styles start here
+***********************************************************************************************/
+.__react_component_tooltip.type-dark.place-bottom:after {
+  border-bottom-width: 0px !important;
+}
+
+.__react_component_tooltip.type-dark.place-right:after {
+  border-right-width: 0px !important;
+}
+
+.__react_component_tooltip.type-dark.place-top:after {
+  border-top-width: 0px !important;
+}
+
+.__react_component_tooltip.type-dark.place-left:after {
+  border-left-width: 0px !important;
+}
+
+.__react_component_tooltip.type-dark.place-bottom.tooltip, .__react_component_tooltip.type-dark.place-right.tooltip, .__react_component_tooltip.type-dark.place-left.tooltip, .__react_component_tooltip.type-dark.place-top.tooltip {
+  background-color: #6a6a6a;
+}
+
+.__react_component_tooltip.place-bottom.tooltip {
+  margin-top: 6px;
+  padding: 8px;
+}
+
+.__react_component_tooltip.place-right.tooltip {
+  margin-left: 14px;
+  padding: 8px;
+}
+
+.__react_component_tooltip.place-left.tooltip {
+  margin-right: 14px;
+  padding: 8px;
+}
+
+.__react_component_tooltip.place-top.tooltip {
+  margin-bottom: 6px;
+  padding: 8px;
+}
+
+.__react_component_tooltip.place-bottom.tooltip > span, .__react_component_tooltip.place-right.tooltip > span, .__react_component_tooltip.place-left.tooltip > span, .__react_component_tooltip.place-top.tooltip > span {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 12px;
+}
